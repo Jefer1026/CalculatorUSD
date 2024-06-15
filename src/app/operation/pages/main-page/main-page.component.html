@@ -1,0 +1,50 @@
+<style type="text/css">
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+</style>
+
+<div class="container bg-dark">
+
+  <div class="text-center card bg-opacity-10">
+
+    <h1
+    class="mt-5 mb-5"
+    >Calculator</h1>
+
+    <form class="col">
+
+      <input
+
+       [(ngModel)]="result"
+
+        name="usd"
+        type="number"
+        class="form-control-lg mt-2 mb-2 mx-5 row"
+        placeholder="USD">
+
+      <br>
+      <button
+        (click)="sumOperation()"
+        class="btn btn-primary mt-3 mb-3 row">
+        SEND
+      </button>
+
+      <input
+        *ngIf="op!==0"
+        name="cop"
+        type="number"
+        class="form-control-lg mt-5 mb-5 mx-5 row"
+        value="{{op}}"
+        placeholder="COP">
+
+    </form>
+
+
+  </div>
+</div>
+
