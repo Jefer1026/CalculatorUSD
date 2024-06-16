@@ -16,7 +16,7 @@
     class="mt-5 mb-5"
     >Calculator</h1>
 
-    <form class="col">
+    <form class="col" (ngSubmit)="sumOperation()">
 
       <input
 
@@ -29,7 +29,7 @@
 
       <br>
       <button
-        (click)="sumOperation()"
+
         class="btn btn-primary mt-3 mb-3 row">
         SEND
       </button>
@@ -37,9 +37,9 @@
       <input
         *ngIf="op!==0"
         name="cop"
-        type="number"
+        type="text"
         class="form-control-lg mt-5 mb-5 mx-5 row"
-        value="{{op}}"
+        value="{{op | currency}}"
         placeholder="COP">
 
     </form>

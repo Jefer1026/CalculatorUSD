@@ -7,16 +7,18 @@ import {Component, input} from '@angular/core';
 })
 export class MainPageComponent {
 
-  public result:number=0;
+  public result:string="";
+  public resultn:number=0;
   public op:number = 0;
-  public option:string="";
+
 
 
   public sumOperation() :void{
-
-    this.op=(((this.result+(this.result*0.07))*4150)*2)+10000;
-    this.result=0;
-
+   console.log(this.result);
+   this.resultn=Number(this.result);
+    this.op=(((this.resultn+(this.resultn*0.07))*4150)*2)+10000;
+   console.log(this.op);
+   this.result="";
 
 }
 
