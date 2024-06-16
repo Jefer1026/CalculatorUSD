@@ -20,6 +20,8 @@ export class MainPageComponent {
 
       this.op = (((this.resultn + (this.resultn * 0.07)) * 4150) * 2) + 10000;
       this.result = "";
+    }else{
+      this.op = 0;
     }
 
   }
